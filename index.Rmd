@@ -5,6 +5,7 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+library("kableExtra")
 source("analysis.R")
 ```
 
@@ -13,7 +14,8 @@ This data comes from [this repo](https://github.com/alex/nyt-2020-election-scrap
 Here is the number of timestamps for each state in the dataset:
 
 ```{r}
-knitr::kable(timestamps_by_state, col.names=c("State", "Number of Timestamps"))
+knitr::kable(timestamps_by_state, col.names=c("State", "Number of Timestamps"), "html") %>% 
+  kable_styling(full_width = F)
 ```
 
 Here is what the result looked like at the end of the vote tallies:
