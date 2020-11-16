@@ -2,10 +2,10 @@ library(tidyverse)
 raw_data <- read.csv("https://raw.githubusercontent.com/alex/nyt-2020-election-scraper/master/all-state-changes.csv")
 
 # basic dataframe exploration
-num_col <- ncol(data)
-num_rows <- nrow(data)
-num_states <- length(unique(data$state))
-num_time_stamps <- length(unique(data$timestamp))
+num_col <- ncol(raw_data)
+num_rows <- nrow(raw_data)
+num_states <- length(unique(raw_data$state))
+num_time_stamps <- length(unique(raw_data$timestamp))
 
 # formatting: splitting name and ev count, add biden and trump vote columns
 data <- raw_data %>% 
