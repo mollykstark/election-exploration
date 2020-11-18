@@ -1,5 +1,5 @@
 ---
-title: "election exploration"
+title: "Election Exploration"
 output: html_document
 ---
 
